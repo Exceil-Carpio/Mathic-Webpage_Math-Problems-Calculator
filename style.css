@@ -1,0 +1,265 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.sidebar::-webkit-scrollbar{
+    width: 10px;
+}
+
+.sidebar::-webkit-scrollbar-thumb{
+    background-color: #90E0EF;
+}
+
+.sidebar::-webkit-scrollbar-track{
+    background-color: #020334;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+div .space{
+    height: 100px;
+}
+
+.sidebar{
+    position: fixed;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: #03045E;
+    overflow-y: scroll;
+    transition: all .5s ease;
+}
+
+.sidebar header{
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    line-height: 70px;
+    background: #03045E;
+    user-select: none;
+}
+
+.sidebar ul label{
+    display: block;
+    height: 100%;
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-size: 15px;
+    color: white;
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255, 255, 255, .1);
+    border-bottom: 1px solid black;
+    transition: .4s;
+}
+
+ul li:hover label{
+    padding-left: 50px;
+    color: #90E0EF;
+}
+
+.welcome h1{
+    font-size: 100px;
+    font-weight: lighter;
+    color:#03045E;
+}
+
+.welcome h3{
+    color: #03045E;
+    font-size: 20px;
+}
+
+#problem1:checked ~ .sidebar ul .problem1,
+#problem2:checked ~ .sidebar ul .problem2,
+#problem3:checked ~ .sidebar ul .problem3,
+#problem4:checked ~ .sidebar ul .problem4,
+#problem5:checked ~ .sidebar ul .problem5,
+#problem6:checked ~ .sidebar ul .problem6,
+#problem7:checked ~ .sidebar ul .problem7,
+#problem8:checked ~ .sidebar ul .problem8,
+#problem9:checked ~ .sidebar ul .problem9,
+#problem10:checked ~ .sidebar ul .problem10,
+#problem11:checked ~ .sidebar ul .problem11,
+#problem12:checked ~ .sidebar ul .problem12,
+#problem13:checked ~ .sidebar ul .problem13,
+#problem14:checked ~ .sidebar ul .problem14,
+#problem15:checked ~ .sidebar ul .problem15,
+#problem16:checked ~ .sidebar ul .problem16,
+#problem17:checked ~ .sidebar ul .problem17,
+#problem18:checked ~ .sidebar ul .problem18,
+#problem19:checked ~ .sidebar ul .problem19,
+#problem20:checked ~ .sidebar ul .problem20,
+#problem21:checked ~ .sidebar ul .problem21{
+    padding-left: 50px;
+    background: #020334;
+    color: #90E0EF;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section .content{
+    display: none;
+    text-align: center;
+    position: absolute;
+    padding: 10px;
+    border: 5px solid;
+    border-color: #03045E;
+}
+
+#home:checked ~ section .welcome,
+#problem1:checked ~ section .problem-1,
+#problem2:checked ~ section .problem-2,
+#problem3:checked ~ section .problem-3,
+#problem4:checked ~ section .problem-4,
+#problem5:checked ~ section .problem-5,
+#problem6:checked ~ section .problem-6,
+#problem7:checked ~ section .problem-7,
+#problem8:checked ~ section .problem-8,
+#problem9:checked ~ section .problem-9,
+#problem10:checked ~ section .problem-10,
+#problem11:checked ~ section .problem-11,
+#problem12:checked ~ section .problem-12,
+#problem13:checked ~ section .problem-13,
+#problem14:checked ~ section .problem-14,
+#problem15:checked ~ section .problem-15,
+#problem16:checked ~ section .problem-16,
+#problem17:checked ~ section .problem-17,
+#problem18:checked ~ section .problem-18,
+#problem19:checked ~ section .problem-19,
+#problem20:checked ~ section .problem-20,
+#problem21:checked ~ section .problem-21{
+    display: block;
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: #90E0EF;
+}
+
+.sidebar ul{
+    margin-right: 16px;
+}
+
+#check{
+    display: none;
+}
+
+#check:checked ~ .sidebar{
+    left: 0;
+}
+
+#check:checked ~ label #btn{
+    left: 250px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#check:checked ~ label #cancel{
+    left: 195px;
+}
+
+#check:checked ~ section{
+    margin-left: 150px;
+}
+
+label #btn, label #cancel{
+    position: absolute;
+    cursor: pointer;
+    background: #03045E;
+    border-radius: 3px;
+}
+
+label #btn{
+    left: 40px;
+    top: 25px;
+    font-size: 35px;
+    color: #90E0EF;
+    padding: 6px 12px;
+    transition: all .5s;
+}
+
+label #cancel{
+    z-index: 1000;
+    left: -195px;
+    top: 17px;
+    font-size: 30px;
+    color: #90E0EF;
+    padding: 4px 9px;
+    transition: all .5s ease;
+}
+
+.navbar{
+    display: flex;
+    background: #03045E;
+    width: 100%;
+    height: 100px;
+    align-items: center;
+    justify-content: end;
+}
+
+.navbar h1{
+    width: 200px;
+    color: aqua;
+    margin-right: 100px;
+    font-size: 50px;
+}
+
+section{
+    height: 500px;
+    width: 100%;
+    transition: all .5s;
+}
+
+form{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+input[type=number]{
+    width: 200px;
+    height: 50px;
+    margin-top: 5px;
+    margin-right: 5px;
+    font-size: 150%;
+}
+
+input[type=text]{
+    width: 200px;
+    height: 50px;
+    margin-top: 5px;
+    margin-right: 5px;
+    font-size: 150%;
+}
+
+input[type=submit]{
+    width: 130px;
+    height: 50px;
+    margin-right: 5px;
+    font-size: 150%;
+    color: white;
+    background-color: #03045E;
+    
+}
+
+.unit{
+    text-align:left; 
+    font-size: 120%;
+    font-weight: bold;
+}
